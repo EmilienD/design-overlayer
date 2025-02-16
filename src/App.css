@@ -1,0 +1,94 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.video {
+  min-height: 100vh;
+  min-width: 100vw;
+  position: absolute;
+}
+.overlay-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-item: center;
+  justify-content: center;
+}
+.overlayed-image {
+  flex: 1 1 auto;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+.controls {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+  align-items: center;
+  opacity: 1;
+  transition: opacity ease-in 100ms;
+}
+
+.controls.hidden {
+  opacity: 0;
+}
+
+.controls.hidden * {
+  pointer-events: none;
+}
+
+.controls .input-file-label {
+  cursor: pointer;
+  padding: 1em 2em;
+  border-radius: 1em;
+  background-color: coral;
+  display: flex;
+  margin: 0 auto;
+  font-weight: bold;
+}
+.input-file-label input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.file-list {
+  display: flex;
+  list-style-type: none;
+  gap: 3px;
+  margin: 0;
+  padding: 0;
+}
+
+.file-list img {
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  height: 10vh;
+}
+
+.file-list li,
+.file-list button {
+  line-height: 0;
+}
+
+.file-list li.selected {
+  outline: 3px solid rebeccapurple;
+}
+
+.file-list button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+}

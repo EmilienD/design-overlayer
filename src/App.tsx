@@ -27,7 +27,7 @@ function App() {
       {error && <p>{error}</p>}
 
       <div className="container">
-        <video ref={videoRef} autoPlay className="video" />
+        <video ref={videoRef} autoPlay playsInline muted className="video" />
         {images[selectedIndex] && (
           <div className="overlay-container">
             <img src={images[selectedIndex].url} className="overlayed-image" />
